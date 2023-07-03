@@ -1,0 +1,40 @@
+.body {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.body>div:first-child {
+    width: 90%;
+}
+.pagination{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dowloadBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    width: 80px;
+    height: 75px;
+    background: #FFF2E7;
+    box-shadow: 0px 0px 6px #E7E9F2;
+    border-radius: 8px 0px 0px 8px;
+    cursor: pointer;
+}
+
+.dowloadBtn>p {
+    margin: 0;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FF7506;
+}

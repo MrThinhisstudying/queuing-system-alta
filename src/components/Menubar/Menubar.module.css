@@ -1,0 +1,117 @@
+.container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    background-color: white;
+}
+
+.container>.wrap>img {
+    width: 80px;
+    height: 64px;
+    margin-top: 32px;
+    margin-left: 60px;
+}
+
+.listBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    height: 300px;
+    margin-top: 54px;
+}
+
+.listBtn>div {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin: 0 12px;
+    padding: 14px 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* .btn{
+    height: 48px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin: 0 12px;
+    padding: 14px 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+} */
+
+.listBtn>.btn>p{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7D88;
+}
+.listBtn>.btnActive>p{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+.listBtn>.btn:hover {
+    color: white;
+    background-color: #FF7506;
+    border-radius: 8px;
+}
+
+.btnActive{
+    color: white;
+    background-color: #FF7506;
+    border-radius: 8px;
+}
+.listBtn>.btn:hover> p {
+    color: white;
+}
+.btnActive>p{
+    color: white;
+}
+.settingBtn{
+    position: absolute;
+    width: 200px;
+    height: 144px;
+    background-color: white;
+    left: 200px;
+    z-index: 10;
+}
+
+.logoutBtn {
+    width: initial;
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    margin: 0 12px;
+    margin-bottom: 30px;
+    padding: 14px 12px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #FFF2E7;
+    cursor: pointer;
+}
+
+.logoutBtn>p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FF7506;
+}

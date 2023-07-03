@@ -1,0 +1,21 @@
+.body {
+    margin-top: 5px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.body>div:first-child {
+    width: 90%;
+}
+
+.body>div>div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.btn{
+    text-decoration: underline;
+    color: #4277FF;
+    cursor: pointer;
+}

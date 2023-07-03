@@ -1,0 +1,60 @@
+:root {
+    --primary-background: #F7F7F7;
+    --orange-color-400: #FF9138;
+    --red-text-color: #E73F3F;
+    --orange-text-color-500: #FF7506;
+}
+
+.password {
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.password>.normal {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 44px;
+    padding: 10px 20px 10px 12px;
+    box-sizing: border-box;
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.password>div>.passType,
+.password>div>.passType:focus {
+    width: 100%;
+    border: none;
+    outline: none;
+    -webkit-text-security: disc;
+    background: transparent;
+    color: #535261;
+}
+
+.password>div>input,
+.password>div>input:focus {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #535261;
+}
+
+.password>div>svg {
+    cursor: pointer;
+}
+
+.error {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 44px;
+    padding: 10px 20px 10px 12px;
+    box-sizing: border-box;
+    border: 1.5px solid var(--red-text-color);
+    border-radius: 8px;
+    background-color: white;
+}

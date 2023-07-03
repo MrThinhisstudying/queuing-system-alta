@@ -1,0 +1,21 @@
+.input {
+    width: 384px;
+    height: 44px;
+    background: #EAEAEC;
+    border-radius: 6px;
+    margin-top: 8px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+}
+
+.input>p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #535261;
+    opacity: 0.5;
+}

@@ -1,0 +1,50 @@
+.infoContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.body {
+    height: 90%;
+    background-color: white;
+    margin-right: 64px;
+    border-radius: 16px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+.body>h3 {
+    margin: 0;
+}
+
+.input{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.inputForm>p {
+    width: fit-content;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #282739;
+}
+
+.inputForm>p span{
+    color: red;
+}
+
+.inputSelectBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

@@ -1,0 +1,21 @@
+:root{
+    --orange-color-400: #FF9138;
+}
+
+.buttonOutline {
+    width: 162px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--orange-color-400);
+    filter: drop-shadow(0px 0px 6px #E7E9F2);
+    border-radius: 8px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--orange-color-400);
+    cursor: pointer;
+}

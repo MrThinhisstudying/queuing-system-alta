@@ -1,0 +1,28 @@
+.input {
+    height: 44px;
+    width: 400px;
+    padding: 10px 270px 10px 12px;
+    box-sizing: border-box;
+    border: 1.5px solid #D4D4D7;
+    border-radius: 8px;
+    background-color: white;
+    color: #37474F;
+}
+
+.input:focus {
+    border: 1.5px solid #D4D4D7;
+    outline: none;
+}
+
+.error {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 44px;
+    padding: 10px 20px 10px 12px;
+    box-sizing: border-box;
+    border: 1.5px solid var(--red-text-color);
+    border-radius: 8px;
+    background-color: white;
+    color: #37474F;
+}

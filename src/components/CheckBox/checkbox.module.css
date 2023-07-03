@@ -1,0 +1,15 @@
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.checkBtn {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    accent-color: #4277FF;
+    margin-left: 0;
+    border: 1.5px solid #4277FF;
+}

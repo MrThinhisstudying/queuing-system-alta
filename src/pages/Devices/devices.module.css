@@ -1,0 +1,147 @@
+:root {
+    --orange-text-color-500: #FF7506;
+}
+
+.container>h1 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--orange-text-color-500);
+    margin: 0;
+}
+
+.filterbtn {
+    display: flex;
+    flex-direction: row;
+    padding-right: 70px;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.filterbtn>div:first-child {
+    width: fit-content;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.dropdownFrame {
+    width: 215px;
+}
+
+.body {
+    margin-top: 5px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.body>div:first-child {
+    width: 90%;
+}
+
+table {
+    width: 100%;
+    background-color: white;
+    filter: drop-shadow(2px 2px 8px rgba(232, 239, 244, 0.8));
+    border-radius: 12px;
+}
+
+thead {
+    color: white;
+}
+
+table thead th {
+    padding: 15px 8px;
+    text-align: left;
+}
+
+thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* tbody > tr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+
+tbody td {
+    padding: 8px;
+    /* height: 34px; */
+    text-align: left;
+    /* vertical-align: center; */
+}
+
+.status>div {
+    /* height: 34px; */
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.red,
+.green,
+.blue,
+.gray {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.red {
+    background-color: #EC3740;
+}
+
+.green {
+    background-color: #35C75A;
+}
+
+.blue {
+    background-color: #4277FF;
+}
+
+.gray {
+    background-color: #7E7D88;
+}
+
+.description {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.description p {
+    margin: 0;
+}
+
+.deviceIP > p{
+    width: 90px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.description>p:first-child {
+    width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.body>div>div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.btn{
+    text-decoration: underline;
+    color: #4277FF;
+    cursor: pointer;
+}

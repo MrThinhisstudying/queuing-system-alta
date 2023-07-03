@@ -1,0 +1,19 @@
+.filterBtn{
+    width: 100%;
+    padding-right: 60px;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.body{
+    width: 100%;
+    margin-top: 10px;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+.pagination {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
