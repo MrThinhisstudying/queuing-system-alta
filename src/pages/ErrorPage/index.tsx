@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
 export const ErrorPage = () => {
-
-    return (
-        <div id="error-page" >
-            <h1>Oops!</h1>
-            <p>Sorry, an unexpected error has occurred.</p>
-        </div>
-    )
-}
+  return (
+    <div id="error-page">
+      <h1>404 Error Page</h1>
+      <p>Không tìm thấy nội dung phù hợp</p>
+    </div>
+  );
+};

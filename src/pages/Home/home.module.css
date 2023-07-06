@@ -1,5 +1,5 @@
 .container {
-    width: fit-content;
+    width: 100%;
     height: 397px;
     background: #FFFFFF;
     display: flex;
@@ -33,15 +33,18 @@
     height: 248px;
     border-radius: 318px;
 }
+
 .leftSide>div>label {
     position: absolute;
     left: 169px;
     bottom: -10px;
     cursor: pointer;
 }
-.leftSide>div>label>input{
+
+.leftSide>div>label>input {
     display: none;
 }
+
 .leftSide>div>.changeBtn {
     position: absolute;
 }
@@ -58,10 +61,14 @@
 .rightSide {
     width: 100%;
     display: grid;
-    grid-template-columns: 384px 384px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 76px 76px 76px;
     column-gap: 24px;
     row-gap: 24px;
+}
+
+.margin80 {
+    margin-right: 80px;
 }
 
 .rightSide>div {

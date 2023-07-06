@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./detail.module.css";
+import styles from "./DevicesDetail.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { changeValue } from "../../../store/reducers/breadcrumbSlice";
-import { ButtonAdd } from "../../../components/ButtonAdd";
+import { RootState } from "../../store/store";
+import { changeValue } from "../../store/reducers/breadcrumbSlice";
+import { ButtonAdd } from "../../components/ButtonAdd";
 
-export const Detail = () => {
+export const DevicesDetail = () => {
   const deviceState = useSelector((state: RootState) => state.device.device);
   const breadcrumbState = useSelector(
     (state: RootState) => state.breadcrumb.value

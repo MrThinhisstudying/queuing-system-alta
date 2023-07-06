@@ -37,7 +37,7 @@
     outline: none;
 }
 
-.checklist{
+.checklist {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -49,10 +49,10 @@
     align-items: center;
     gap: 20px;
 }
-.checkbox > div:first-child{
+
+.checkbox>div:first-child {
     width: 150px;
 }
-
 
 .frameNumber {
     width: 61px;

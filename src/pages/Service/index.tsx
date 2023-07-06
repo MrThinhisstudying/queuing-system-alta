@@ -9,14 +9,14 @@ import {
 } from "../../store/reducers/serviceSlice";
 import { checkTableHeader } from "../../utils";
 import { addValue } from "../../store/reducers/breadcrumbSlice";
-import { Info } from "./Info";
-import { Detail } from "./Detail";
 import { service } from "../../types";
 import { Dropdown } from "../../components/Dropdown";
 import { DateButton } from "../../components/DateButton";
 import { SearchText } from "../../components/SearchText";
 import { Pagination } from "../../components/Pagination";
 import { ButtonAdd } from "../../components/ButtonAdd";
+import { ServiceInfo } from "./ServiceInfo";
+import { ServiceDetail } from "./ServiceDetail";
 
 const tableHeader = [
   "Mã dịch vụ",
@@ -180,7 +180,7 @@ export const Service = () => {
                 </div>
               </div>
 
-              <div>
+              <div style={{ marginRight: "80px" }}>
                 <p>Từ khóa</p>
                 <SearchText
                   setWidth={300}
@@ -278,9 +278,9 @@ export const Service = () => {
         </React.Fragment>
       )}
 
-      {displayPage === "Thêm dịch vụ" && <Info />}
-      {displayPage === "Chi tiết" && <Detail />}
-      {displayPage === "Cập nhật" && <Info />}
+      {displayPage === "Thêm dịch vụ" && <ServiceInfo />}
+      {displayPage === "Chi tiết" && <ServiceDetail />}
+      {displayPage === "Cập nhật" && <ServiceInfo />}
     </div>
   );
 };

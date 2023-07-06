@@ -1,30 +1,30 @@
 import React, { useCallback, useEffect, useState } from "react";
-import styles from "./info.module.css";
-import { removeLastItemBreadScrumb } from "../../../utils";
+import styles from "./AccountInfo.module.css";
+import { removeLastItemBreadScrumb } from "../../utils";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { changeValue } from "../../../store/reducers/breadcrumbSlice";
-import { account } from "../../../types";
+import { RootState } from "../../store/store";
+import { changeValue } from "../../store/reducers/breadcrumbSlice";
+import { account } from "../../types";
 import {
   clearAccount,
   updateAccounts,
-} from "../../../store/reducers/accountSlice";
+} from "../../store/reducers/accountSlice";
 import {
   addData,
   updateData,
   updateNumberUseInRole,
-} from "../../../config/firebase/firestore";
-import { Input } from "../../../components/Input";
-import { PasswordInput } from "../../../components/PasswordInput";
-import { Dropdown } from "../../../components/Dropdown";
-import { ButtonOutline } from "../../../components/ButtonOutline";
-import { Button } from "../../../components/Button";
+} from "../../config/firebase/firestore";
+import { Input } from "../../components/Input";
+import { PasswordInput } from "../../components/PasswordInput";
+import { Dropdown } from "../../components/Dropdown";
+import { ButtonOutline } from "../../components/ButtonOutline";
+import { Button } from "../../components/Button";
 
 type InfoProps = {
   data: account | null;
 };
 
-export const Info = (props: InfoProps) => {
+export const AccountInfo = (props: InfoProps) => {
   const breadcrumbState = useSelector(
     (state: RootState) => state.breadcrumb.value
   );

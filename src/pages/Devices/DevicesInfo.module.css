@@ -16,7 +16,7 @@
     margin: 0;
 }
 
-.input{
+.input {
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -31,7 +31,7 @@
     color: #282739;
 }
 
-.inputForm>p span{
+.inputForm>p span {
     color: red;
 }
 
@@ -40,7 +40,7 @@
     flex-direction: column;
 }
 
-.btn{
+.btn {
     width: 100%;
     display: flex;
     flex-direction: row;

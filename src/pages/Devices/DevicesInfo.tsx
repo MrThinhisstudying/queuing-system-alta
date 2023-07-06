@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
-import styles from "./info.module.css";
+import styles from "./DevicesInfo.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { changeValue } from "../../../store/reducers/breadcrumbSlice";
-import { device } from "../../../types";
-import { addData, updateData } from "../../../config/firebase/firestore";
-import { resetDevice } from "../../../store/reducers/devicesSlice";
-import { Input } from "../../../components/Input";
-import { Dropdown } from "../../../components/Dropdown";
-import { SelectBox } from "../../../components/SelectBox";
-import { Button } from "../../../components/Button";
-import { ButtonOutline } from "../../../components/ButtonOutline";
+import { RootState } from "../../store/store";
+import { changeValue } from "../../store/reducers/breadcrumbSlice";
+import { device } from "../../types";
+import { addData, addDatas, updateData } from "../../config/firebase/firestore";
+import { resetDevice } from "../../store/reducers/devicesSlice";
+import { Input } from "../../components/Input";
+import { Dropdown } from "../../components/Dropdown";
+import { SelectBox } from "../../components/SelectBox";
+import { Button } from "../../components/Button";
+import { ButtonOutline } from "../../components/ButtonOutline";
 
 // const services =["Tất cả", "Khám sản phụ khoa", "Khám răng hàm mặt", "Khám tai mũi họng", "Khám hô hấp", "Khám tổng quát"]
 
-export const Info = () => {
+export const DevicesInfo = () => {
   const dispatch = useDispatch();
   const breadcrumbSate = useSelector(
     (state: RootState) => state.breadcrumb.value

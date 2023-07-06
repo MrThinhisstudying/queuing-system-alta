@@ -1,26 +1,26 @@
 import React, { useState } from "react";
-import styles from "./newNumberLevel.module.css";
+import styles from "./NumberNew.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
+import { RootState } from "../../store/store";
 import {
   getCookie,
   getCurrentTimeOrTimeExpire,
   removeLastItemBreadScrumb,
-} from "../../../utils";
-import { changeValue } from "../../../store/reducers/breadcrumbSlice";
-import { NumberLevel, device, notification, service } from "../../../types";
+} from "../../utils";
+import { changeValue } from "../../store/reducers/breadcrumbSlice";
+import { NumberLevel, device, notification, service } from "../../types";
 import {
   addData,
   getAllDataInColection,
-} from "../../../config/firebase/firestore";
-import { addNumberLevels } from "../../../store/reducers/numberLevelSlice";
+} from "../../config/firebase/firestore";
+import { addNumberLevels } from "../../store/reducers/numberLevelSlice";
 import { useNavigate } from "react-router-dom";
-import { updateNotifications } from "../../../store/reducers/notificationSlice";
-import { Dropdown } from "../../../components/Dropdown";
-import { ButtonOutline } from "../../../components/ButtonOutline";
-import { Button } from "../../../components/Button";
+import { updateNotifications } from "../../store/reducers/notificationSlice";
+import { Dropdown } from "../../components/Dropdown";
+import { ButtonOutline } from "../../components/ButtonOutline";
+import { Button } from "../../components/Button";
 
-export const NewNumberLevel = () => {
+export const NumberNew = () => {
   const breadcrumbState = useSelector(
     (state: RootState) => state.breadcrumb.value
   );

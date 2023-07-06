@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
-
-import styles from "./info.module.css";
+import styles from "./ServiceInfo.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { service } from "../../../types";
-import { changeValue } from "../../../store/reducers/breadcrumbSlice";
-import { removeLastItemBreadScrumb } from "../../../utils";
+import { RootState } from "../../store/store";
+import { service } from "../../types";
+import { changeValue } from "../../store/reducers/breadcrumbSlice";
+import { removeLastItemBreadScrumb } from "../../utils";
 import {
   clearService,
   createNewService,
   updateService,
-} from "../../../store/reducers/serviceSlice";
-import { updateData } from "../../../config/firebase/firestore";
-import { addHistorys } from "../../../store/reducers/historySlice";
-import { Input } from "../../../components/Input";
-import { Dropdown } from "../../../components/Dropdown";
-import { CheckBox } from "../../../components/CheckBox";
-import { ButtonOutline } from "../../../components/ButtonOutline";
-import { Button } from "../../../components/Button";
+} from "../../store/reducers/serviceSlice";
+import { updateData } from "../../config/firebase/firestore";
+import { addHistorys } from "../../store/reducers/historySlice";
+import { Input } from "../../components/Input";
+import { Dropdown } from "../../components/Dropdown";
+import { CheckBox } from "../../components/CheckBox";
+import { ButtonOutline } from "../../components/ButtonOutline";
+import { Button } from "../../components/Button";
 
-export const Info = () => {
+export const ServiceInfo = () => {
   const serviceState = useSelector((state: RootState) => state.service.service);
   const servicesState = useSelector(
     (state: RootState) => state.service.services

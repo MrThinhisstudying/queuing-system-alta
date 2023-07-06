@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import styles from "./devices.module.css";
+import styles from "./Devices.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addDevice,
@@ -8,14 +8,14 @@ import {
 } from "../../store/reducers/devicesSlice";
 import { RootState } from "../../store/store";
 import { addValue } from "../../store/reducers/breadcrumbSlice";
-import { Info } from "./Info";
 import { device } from "../../types";
-import { Detail } from "./Detail";
 import { checkTableHeader } from "../../utils";
 import { Dropdown } from "../../components/Dropdown";
 import { Pagination } from "../../components/Pagination";
 import { ButtonAdd } from "../../components/ButtonAdd";
 import { SearchText } from "../../components/SearchText";
+import { DevicesInfo } from "./DevicesInfo";
+import { DevicesDetail } from "./DevicesDetail";
 
 const tableHeader = [
   "Mã thiết bị",
@@ -29,6 +29,13 @@ const tableHeader = [
 ];
 
 export const Devices = () => {
+  const [showPopup, setShowPopup] = useState<string>("");
+  // const handleViewMore = () => {
+  //   setShowPopup((prevShowPopup) => !prevShowPopup);
+  // };
+  // const handlePopupClick = () => {
+  //   setShowPopup(false);
+  // };
   const dispatch = useDispatch<any>();
   const devicesState = useSelector((state: RootState) => state.device.devices);
   const breadcrumbState = useSelector(
@@ -196,7 +203,7 @@ export const Devices = () => {
                 </div>
               </div>
 
-              <div>
+              <div style={{ marginRight: "80px" }}>
                 <p>Từ khóa</p>
                 <SearchText
                   setWidth={300}
@@ -245,7 +252,7 @@ export const Devices = () => {
                             </td>
                             <td className={styles.description}>
                               <p>{item.deviceUse}</p>
-                              <p>Xem thêm</p>
+                              <button>Xem thêm</button>
                             </td>
                             <td
                               className={styles.btn}
@@ -290,7 +297,19 @@ export const Devices = () => {
                             </td>
                             <td className={styles.description}>
                               <p>{item.deviceUse}</p>
-                              <p>Xem thêm</p>
+                              <button onClick={() => setShowPopup(item.id)}>
+                                Xem thêm
+                              </button>
+                              {showPopup === item.id && (
+                                <div
+                                  className={styles.popup}
+                                  onClick={() => {
+                                    setShowPopup("");
+                                  }}
+                                >
+                                  {item.deviceUse}
+                                </div>
+                              )}
                             </td>
                             <td
                               className={styles.btn}
@@ -323,9 +342,9 @@ export const Devices = () => {
         </React.Fragment>
       )}
 
-      {displayPage === "Thêm thiết bị" && <Info />}
-      {displayPage === "Chi tiết thiết bị" && <Detail />}
-      {displayPage === "Cập nhật thiết bị" && <Info />}
+      {displayPage === "Thêm thiết bị" && <DevicesInfo />}
+      {displayPage === "Chi tiết thiết bị" && <DevicesDetail />}
+      {displayPage === "Cập nhật thiết bị" && <DevicesInfo />}
     </div>
   );
 };

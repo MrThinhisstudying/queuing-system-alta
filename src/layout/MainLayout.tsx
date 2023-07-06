@@ -1,25 +1,25 @@
 import React, { useEffect, useState, useCallback } from "react";
-import styles from "./defaultLayout.module.css";
-import AvatarTest from "../../assets/images/avatar_test.svg";
+import styles from "./MainLayout.module.css";
+import AvatarTest from "../assets/images/avatar_test.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../store/store";
+import { RootState } from "../store/store";
 import {
   addValue,
   changeValue,
   clearValue,
-} from "../../store/reducers/breadcrumbSlice";
-import { account, stateModel } from "../../types";
-import { getCookie } from "../../utils";
-import { getDocumentWithId } from "../../config/firebase/firestore";
-import { changeAccountLogin } from "../../store/reducers/accountSlice";
-import { getAllRole } from "../../store/reducers/roleSlice";
-import { getAllServices } from "../../store/reducers/serviceSlice";
-import { getAllDevices } from "../../store/reducers/devicesSlice";
-import { Menubar } from "../../components/Menubar";
-import { Notification } from "../../components/Notification";
+} from "../store/reducers/breadcrumbSlice";
+import { account, stateModel } from "../types";
+import { getCookie } from "../utils";
+import { getDocumentWithId } from "../config/firebase/firestore";
+import { changeAccountLogin } from "../store/reducers/accountSlice";
+import { getAllRole } from "../store/reducers/roleSlice";
+import { getAllServices } from "../store/reducers/serviceSlice";
+import { getAllDevices } from "../store/reducers/devicesSlice";
+import { Menubar } from "../components/Menubar";
+import { Notification } from "../components/Notification";
 
-type DefaultLayoutProps = {
+type MainLayoutProps = {
   children: React.ReactNode;
 };
 
@@ -113,7 +113,7 @@ const breadcrumbData = [
   },
 ] as { path: string; data: stateModel[] }[];
 
-export const DefaultLayout = (props: DefaultLayoutProps) => {
+export const MainLayout = (props: MainLayoutProps) => {
   const state = useSelector((state: RootState) => state.breadcrumb.value);
   const accountInfo = useSelector(
     (state: RootState) => state.account.accountLogin

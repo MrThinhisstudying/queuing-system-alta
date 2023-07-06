@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
-import styles from "./info.module.css";
+import styles from "./RoleInfo.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { changeValue } from "../../../store/reducers/breadcrumbSlice";
-import { role } from "../../../types";
-import { addData, updateData } from "../../../config/firebase/firestore";
+import { RootState } from "../../store/store";
+import { changeValue } from "../../store/reducers/breadcrumbSlice";
+import { role } from "../../types";
+import { addData, updateData } from "../../config/firebase/firestore";
 import {
   addRoles,
   clearRole,
   updateRoles,
-} from "../../../store/reducers/roleSlice";
-import { Input } from "../../../components/Input";
-import { CheckBox } from "../../../components/CheckBox";
-import { ButtonOutline } from "../../../components/ButtonOutline";
-import { Button } from "../../../components/Button";
+} from "../../store/reducers/roleSlice";
+import { Input } from "../../components/Input";
+import { CheckBox } from "../../components/CheckBox";
+import { ButtonOutline } from "../../components/ButtonOutline";
+import { Button } from "../../components/Button";
 
 const featuresGroupA = ["Tất cả", "Chức năng x", "Chức năng y", "Chức năng z"];
 const featuresGroupB = ["Tất cả", "Chức năng x", "Chức năng y", "Chức năng z"];
 
-export const Info = () => {
+export const RoleInfo = () => {
   const breadcrumbSate = useSelector(
     (state: RootState) => state.breadcrumb.value
   );

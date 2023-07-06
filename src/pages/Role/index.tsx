@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { getRole } from "../../store/reducers/roleSlice";
 import { addValue } from "../../store/reducers/breadcrumbSlice";
-import { Info } from "./Info";
 import { Pagination } from "../../components/Pagination";
 import { ButtonAdd } from "../../components/ButtonAdd";
+import { RoleInfo } from "./RoleInfo";
 
 const tableHeader = ["Tên vai trò", "Sô người dùng", "Mô tả", " "];
 
@@ -103,8 +103,8 @@ export const Role = () => {
         </div>
       )}
 
-      {displayPage.includes("Thêm vai trò") && <Info />}
-      {displayPage.includes("Cập nhật vai trò") && <Info />}
+      {displayPage.includes("Thêm vai trò") && <RoleInfo />}
+      {displayPage.includes("Cập nhật vai trò") && <RoleInfo />}
     </div>
   );
 };

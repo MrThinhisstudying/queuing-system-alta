@@ -1,25 +1,25 @@
 import React, { useCallback, useEffect, useState } from "react";
-import styles from "./dashboardLayout.module.css";
-import AvatarTest from "../../assets/images/avatar_test.svg";
+import styles from "./DashboardLayout.module.css";
+import AvatarTest from "../assets/images/avatar_test.svg";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addValue,
   changeValue,
   clearValue,
-} from "../../store/reducers/breadcrumbSlice";
+} from "../store/reducers/breadcrumbSlice";
 import { useNavigate } from "react-router-dom";
-import { RootState } from "../../store/store";
-import { getCookie } from "../../utils";
-import { getDocumentWithId } from "../../config/firebase/firestore";
-import { NumberLevel, account, device, service } from "../../types";
-import { changeAccountLogin } from "../../store/reducers/accountSlice";
-import { Calendar } from "../../components/Calendar";
-import { getAllDevices } from "../../store/reducers/devicesSlice";
-import { getAllServices } from "../../store/reducers/serviceSlice";
-import { getAllNumberLevels } from "../../store/reducers/numberLevelSlice";
-import { Menubar } from "../../components/Menubar";
-import { Notification } from "../../components/Notification";
-import { ProgressCustom } from "../../components/ProgressCustom";
+import { RootState } from "../store/store";
+import { getCookie } from "../utils";
+import { getDocumentWithId } from "../config/firebase/firestore";
+import { NumberLevel, account, device, service } from "../types";
+import { changeAccountLogin } from "../store/reducers/accountSlice";
+import { Calendar } from "../components/Calendar";
+import { getAllDevices } from "../store/reducers/devicesSlice";
+import { getAllServices } from "../store/reducers/serviceSlice";
+import { getAllNumberLevels } from "../store/reducers/numberLevelSlice";
+import { Menubar } from "../components/Menubar";
+import { Notification } from "../components/Notification";
+import { ProgressCustom } from "../components/ProgressCustom";
 
 type DashboardLayoutProps = {
   children: React.ReactNode;

@@ -19,6 +19,7 @@ export const addData = async (
         const docRef = await addDoc(collection(db, nameColection), value);
         return { status: true, data: { ...value, id: docRef.id } };
     } catch (error) {
+        console.log(error);
         return { status: false, data: undefined };
     }
 };

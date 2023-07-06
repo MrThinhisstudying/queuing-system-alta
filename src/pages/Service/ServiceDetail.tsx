@@ -1,24 +1,24 @@
 import React, { useCallback, useEffect, useState } from "react";
-import styles from "./detail.module.css";
+import styles from "./ServiceDetail.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { getOnlyDate, removeLastItemBreadScrumb } from "../../../utils";
-import { addValue, changeValue } from "../../../store/reducers/breadcrumbSlice";
+import { RootState } from "../../store/store";
+import { getOnlyDate, removeLastItemBreadScrumb } from "../../utils";
+import { addValue, changeValue } from "../../store/reducers/breadcrumbSlice";
 import {
   getListNumberOfService,
   setFilterNumberList,
   updateIsFilterNumberList,
-} from "../../../store/reducers/serviceSlice";
-import { NumberLevel } from "../../../types";
-import { Dropdown } from "../../../components/Dropdown";
-import { DateButton } from "../../../components/DateButton";
-import { SearchText } from "../../../components/SearchText";
-import { Pagination } from "../../../components/Pagination";
-import { ButtonBackAndUpdateIcon } from "../../../components/ButtonBackAndUpdate";
+} from "../../store/reducers/serviceSlice";
+import { NumberLevel } from "../../types";
+import { Dropdown } from "../../components/Dropdown";
+import { DateButton } from "../../components/DateButton";
+import { SearchText } from "../../components/SearchText";
+import { Pagination } from "../../components/Pagination";
+import { ButtonBackAndUpdateIcon } from "../../components/ButtonBackAndUpdate";
 
 const ruleTest = ["Tăng tự động", "Prefix", "Reset mỗi ngày"];
 
-export const Detail = () => {
+export const ServiceDetail = () => {
   const serviceState = useSelector((state: RootState) => state.service.service);
   const breadScrumState = useSelector(
     (state: RootState) => state.breadcrumb.value

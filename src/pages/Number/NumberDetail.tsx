@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./detail.module.css";
+import styles from "./NumberDetail.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { removeLastItemBreadScrumb } from "../../../utils";
-import { changeValue } from "../../../store/reducers/breadcrumbSlice";
-import { ButtonBack } from "../../../components/ButtonBack";
+import { RootState } from "../../store/store";
+import { removeLastItemBreadScrumb } from "../../utils";
+import { changeValue } from "../../store/reducers/breadcrumbSlice";
+import { ButtonBack } from "../../components/ButtonBack";
 
-export const Detail = () => {
+export const NumberDetail = () => {
   const breadcrumbState = useSelector(
     (state: RootState) => state.breadcrumb.value
   );

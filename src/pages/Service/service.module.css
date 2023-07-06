@@ -1,19 +1,21 @@
-.serviceContainer{
+.serviceContainer {
     height: calc(100% - 88px);
 }
-.filterbtn{
+
+.filterbtn {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
     padding-right: 70px;
     box-sizing: border-box;
 }
-.filterbtn > div:first-child{
+
+.filterbtn>div:first-child {
     display: inline-flex;
     gap: 20px;
 }
 
-.body{
+.body {
     margin-top: 5px;
     width: 100%;
     display: inline-flex;
@@ -23,11 +25,13 @@
 .body>div:first-child {
     width: 90%;
 }
-.btn{
+
+.btn {
     text-decoration: underline;
     color: #4277FF;
     cursor: pointer;
 }
+
 .body>div>div {
     display: flex;
     flex-direction: row-reverse;

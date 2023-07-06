@@ -66,6 +66,7 @@ thead th:last-child {
     border-top-right-radius: 12px;
 }
 
+
 /* tbody > tr {
     display: flex;
     flex-direction: row;
@@ -115,13 +116,37 @@ tbody td {
     height: fit-content;
     display: flex;
     flex-direction: column;
+    align-items: start;
+    position: relative;
+}
+
+.description button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #4277FF;
+    padding: 6px 0 6px 0;
+}
+
+.popup {
+    position: absolute;
+    width: 378px;
+    height: 34px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #FF7506;
+    z-index: 1000;
+    color: black;
+    padding: 8px;
 }
 
 .description p {
     margin: 0;
 }
 
-.deviceIP > p{
+.deviceIP>p {
     width: 90px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -140,7 +165,7 @@ tbody td {
     flex-direction: row-reverse;
 }
 
-.btn{
+.btn {
     text-decoration: underline;
     color: #4277FF;
     cursor: pointer;

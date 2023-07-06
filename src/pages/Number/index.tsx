@@ -1,10 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
-import styles from "./capso.module.css";
+import styles from "./Number.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { addValue } from "../../store/reducers/breadcrumbSlice";
-import { NewNumberLevel } from "./NewNumberLevel";
-import { Detail } from "./Detail";
 import {
   addNumberLevel,
   getAllNumberLevels,
@@ -18,10 +16,12 @@ import { DateButton } from "../../components/DateButton";
 import { SearchText } from "../../components/SearchText";
 import { Pagination } from "../../components/Pagination";
 import { ButtonAdd } from "../../components/ButtonAdd";
+import { NumberNew } from "./NumberNew";
+import { NumberDetail } from "./NumberDetail";
 
 type IsDuplicate = (a: device, b: device) => boolean;
 
-export const CapSo = () => {
+export const Number = () => {
   const breadcrumbState = useSelector(
     (state: RootState) => state.breadcrumb.value
   );
@@ -331,8 +331,8 @@ export const CapSo = () => {
         </React.Fragment>
       )}
 
-      {displayPage.match("Cấp số mới") && <NewNumberLevel />}
-      {displayPage.match("Chi tiết") && <Detail />}
+      {displayPage.match("Cấp số mới") && <NumberNew />}
+      {displayPage.match("Chi tiết") && <NumberDetail />}
     </div>
   );
 };

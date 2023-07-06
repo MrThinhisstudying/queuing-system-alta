@@ -8,13 +8,14 @@ import {
   updateFilterState,
 } from "../../store/reducers/accountSlice";
 import { RootState } from "../../store/store";
-import { Info } from "./Info";
+
 import { addValue } from "../../store/reducers/breadcrumbSlice";
 import { account } from "../../types";
 import { Dropdown } from "../../components/Dropdown";
 import { SearchText } from "../../components/SearchText";
 import { Pagination } from "../../components/Pagination";
 import { ButtonAdd } from "../../components/ButtonAdd";
+import { AccountInfo } from "./AccountInfo";
 
 const tableHeader = [
   "Tên đăng nhập",
@@ -136,7 +137,7 @@ export const Account = () => {
               />
             </div>
 
-            <div>
+            <div style={{ marginRight: "80px" }}>
               <p>Từ khóa</p>
               <SearchText
                 setWidth={300}
@@ -225,9 +226,9 @@ export const Account = () => {
         </div>
       )}
 
-      {displayPage.includes("Thêm tài khoản") && <Info data={null} />}
+      {displayPage.includes("Thêm tài khoản") && <AccountInfo data={null} />}
       {displayPage.includes("Cập nhật tài khoản") && (
-        <Info data={accountState} />
+        <AccountInfo data={accountState} />
       )}
     </div>
   );

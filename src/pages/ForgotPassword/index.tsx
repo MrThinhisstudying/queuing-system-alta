@@ -13,7 +13,7 @@ import { Input } from "../../components/Input";
 import { ButtonOutline } from "../../components/ButtonOutline";
 import { Button } from "../../components/Button";
 import { PasswordInput } from "../../components/PasswordInput";
-
+import warning from "../../assets/images/warning.svg";
 export const ForgotPassword = () => {
   const navigate = useNavigate();
   const [inputPassword, setInputPassword] = useState<string | null>();
@@ -72,7 +72,12 @@ export const ForgotPassword = () => {
                 value=""
                 handleChange={(e) => setInputPassword(e.target.value)}
               />
-
+              {error !== true && (
+                <div className={styles.warning}>
+                  <img src={warning} alt="warning icon" />
+                  <p>Email không tồn tại. Vui lòng thử lại.</p>
+                </div>
+              )}
               <div className={styles.btn}>
                 <ButtonOutline
                   text="Hủy"
@@ -87,6 +92,7 @@ export const ForgotPassword = () => {
           ) : (
             <>
               <h1>Đặt lại mật khẩu mới</h1>
+
               <div>
                 <label>Mật khẩu</label>
                 <PasswordInput
@@ -97,7 +103,6 @@ export const ForgotPassword = () => {
                   }
                 />
               </div>
-
               <div>
                 <label>Nhập lại mật khẩu</label>
                 <PasswordInput
@@ -111,7 +116,16 @@ export const ForgotPassword = () => {
                   }
                 />
               </div>
-
+              {error !== true && (
+                <div className={styles.warning}>
+                  <img src={warning} alt="warning icon" />
+                  <p>
+                    {newPassword.newPass == "" && newPassword.newPassAgain == ""
+                      ? "Vui lòng nhập mật khẩu"
+                      : "Mật khẩu không trùng khớp"}
+                  </p>
+                </div>
+              )}
               <Button
                 text="Xác nhận"
                 handleClick={() => handleChangePassword()}

@@ -1,24 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-import { DefaultLayout, DashboardLayout } from "./layout";
-import {
-  ErrorPage,
-  Login,
-  ForgotPassword,
-  Home,
-  Dashboard,
-  Devices,
-  Service,
-  CapSo,
-  Report,
-  Account,
-  Role,
-  History,
-} from "./pages";
+import { MainLayout } from "./layout/MainLayout";
+import { DashboardLayout } from "./layout/DashboardLayout";
 import store from "./store/store";
 import { Provider } from "react-redux/es/exports";
+import { Login } from "./pages/Login";
+import { ErrorPage } from "./pages/ErrorPage";
+import { ForgotPassword } from "./pages/ForgotPassword";
+import { Home } from "./pages/Home";
+import { Dashboard } from "./pages/Dashboard";
+import { Devices } from "./pages/Devices";
+import { Service } from "./pages/Service";
+import { Report } from "./pages/Report";
+import { Role } from "./pages/Role";
+import { Account } from "./pages/Account";
+import { History } from "./pages/History";
+import { Number } from "./pages/Number";
 
 const router = createBrowserRouter([
   {
@@ -33,76 +31,73 @@ const router = createBrowserRouter([
   {
     path: "/trangchu",
     element: (
-      <DefaultLayout>
-        {" "}
-        <Home />{" "}
-      </DefaultLayout>
+      <MainLayout>
+        <Home />
+      </MainLayout>
     ),
   },
   {
     path: "/thongke",
     element: (
       <DashboardLayout>
-        {" "}
-        <Dashboard />{" "}
+        <Dashboard />
       </DashboardLayout>
     ),
   },
   {
     path: "/thietbi",
     element: (
-      <DefaultLayout>
-        {" "}
-        <Devices />{" "}
-      </DefaultLayout>
+      <MainLayout>
+        <Devices />
+      </MainLayout>
     ),
   },
   {
     path: "/dichvu",
     element: (
-      <DefaultLayout>
+      <MainLayout>
         <Service />
-      </DefaultLayout>
+      </MainLayout>
     ),
   },
   {
     path: "/capso",
     element: (
-      <DefaultLayout>
-        <CapSo />
-      </DefaultLayout>
+      <MainLayout>
+        <Number />
+      </MainLayout>
     ),
   },
   {
     path: "/baocao",
     element: (
-      <DefaultLayout>
+      <MainLayout>
         <Report />
-      </DefaultLayout>
+      </MainLayout>
     ),
   },
   {
     path: "/vaitro",
     element: (
-      <DefaultLayout>
+      <MainLayout>
         <Role />
-      </DefaultLayout>
+      </MainLayout>
     ),
   },
   {
     path: "/taikhoan",
     element: (
-      <DefaultLayout>
+      <MainLayout>
         <Account />
-      </DefaultLayout>
+      </MainLayout>
     ),
   },
   {
     path: "/nhatky",
     element: (
-      <DefaultLayout>
+      <MainLayout>
         <History />
-      </DefaultLayout>
+      </MainLayout>
     ),
   },
 ]);
